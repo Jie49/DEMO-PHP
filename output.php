@@ -31,6 +31,21 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
     }
     else{ echo "user email is empty<br>";
     }
+
+    if($password == $confirm_password)
+{
+    //echo "REGISTRATION SUCCESSFUL";
+    header("location: demo1.php?success=REGISTRATION SUCCESSFULL");
+    exit;
+}
+
+else{
+    
+    //echo "PASSWORD MISMATCH";
+    header("location: demo1.php?error=PASSWORD MISMATCH");
+    exit;
+}
+
 }
 
 ?>
